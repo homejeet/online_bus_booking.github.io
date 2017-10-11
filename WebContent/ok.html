@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+     <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+
+<meta charset="ISO-8859-1">
+<title>BHUBANESWAR BUS SERVICE (ODISHA)</title>
+</head>
+
+<style type="text/css">
+#head{
+height:100%;
+width:100%;
+
+}
+#header{
+  height:60px;
+  width:120%;
+  background-color: yellow;
+
+} 
+
+
+
+#header1{
+height:355px;
+width:120%;
+background-color:pink;
+}
+#content{
+height:220%;
+width:120%;
+background-color: orange;
+
+}
+#content1{
+height:100%;
+width:80%;
+float:left;
+background-image: url("image/bus1.jpg");
+}
+#content2{
+height:100%;
+width:40%;
+float:right;
+background-image: url("image/bus1.jpg");
+}
+/* #upper{
+height:50%;
+width:240%;
+background-color: yellow;
+}
+#lower{
+height:50%;
+width:240%;
+background-color: yellow;
+} */
+
+/* #fmenu{
+height:20px;
+width:130%;
+background-color:red; */
+
+}
+#fooder{
+height:40px;
+width:120%;
+background-color: orange;
+}
+
+ a:link a:visited{
+}
+
+a:hover a:active{
+
+
+}
+
+.mainheader nav{
+ background-color: #666; 
+height: 60px;
+/* border-radius:5px; */
+}
+.mainheader nav ul{
+list-style: none;
+margin: 0 auto;
+}
+.mainheader nav ul li{
+float:center;
+display: inline;
+}
+.mainheader nav a:link .mainheader nav a:visited {
+	color: #fff;
+	display: inline-block;
+	padding: 20px 25px;
+}
+.mainheader nav a:hover  .mainheader nav a:active 
+, .mainheader nav .active a:link , .mainheader nav .active a:visited {
+background-color: #CFSC3F;
+}
+ 
+
+
+
+
+</style>
+<script type="text/javascript">
+/* function check()
+{
+	
+	var status=Confirm("please check details of booked bus!");
+	if(status)
+		{
+		 window.location="Savedata1.java";
+		  	
+		}
+	else
+		{
+		  
+		  window.location="first.html"; 
+		
+		}
+		
+	}
+ */
+</script>
+
+
+<script type="text/javascript" src="jquery.js">
+</script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("input").focus(function(){
+		$("#a1").css("background-color","green");
+	});
+	$("input").blur(function(){
+		$("#a1").css("background-color","pink");
+	});
+	
+});
+
+
+
+   
+    $(function() {
+         $( "#calendar" ).datepicker();   
+    }); 
+
+
+
+</script>
+<body onload="startTime()">
+
+<form action="Savedata1" method="post">
+<div id="head">
+
+
+<div id="header">
+<header class="mainheader">
+<nav>
+ <ul class="nav nav-pills">
+    <li><a href="index1.html"><img alt="" src='image/home.jpg' height='45px' width='50px'></a></li>
+     <li><a href="ok.html"><img alt="" src='image/book.jpg' height='45px' width='80px'></a></li>
+      <li><a href="admin.html"><img alt="" src='image/admin.jpg' height='45px' width='80px'></a></li>
+       <li><a href="fetch.html"><img alt="" src='image/search.jpg' height='45px' width='50px'></a></li>
+        <li><a href="#"><img alt="" src='image/logout.jpg' height='45px' width='80px'></a></li>
+
+ </ul>
+ </nav>
+ </header>
+
+
+<marquee><i>* the bus travelling agency in bhubaneswar is firstly startup and only few bus are available only.  * this is our bhubaneswar bus travelling agency. * our address for contact mobile no:8337970729 or can visit facebook.com on homejeet behera.</i></marquee><br><br>
+
+</div>
+<div id="header1">
+<h1 id="a1"><b><font color="red">ENTER CUSTOMER DETAILS HERE</font></b></h1>
+ENTER NAME:<input type="text" name="name1" required><br><br>
+ENTER AGE:<input type="text" name="age" required><br><br>
+SELECT GENDER:<select name="sex" required>
+<option>select</option>
+<option value="male">MALE</option>
+<option value="female">FEMALE</option>   
+</select><br><br>
+ENTER STATE:<input type="text" name="state" required><br><br>
+ENTER ADDRESS:<input type="text" name="address" required><br><br>
+ENTER PHONE NO:<input type="text" name="phone" required><br><br>
+DATE:<input type="text" id="calendar" name="date"/><br>
+ENTER EMAIL:<input type="email" name="mail" required><br><br>
+
+</div>
+<div id="content">
+
+<table>
+	<tr>
+		<th><font color="blue">BUS NAME</font></th><th><font color="blue">ROUTE</font></th><th> <font color="blue">AVAILABLE-DAY</font></th>
+	</tr>
+	<tr>
+		<td>
+			<img alt="dolphin" src="image/dolphin.jpg" height="100px" width="100px" name="bus" >
+		</td>
+		
+		<td>
+			  BBSR/KOLKATA:<!-- <input type="checkbox" name="bus" value="(FROM) BBSR /(ARRIVE)  KOLKATA"> -->
+		</td>
+		
+		<td>
+		      MON,TUE,THU
+		
+		</td>
+		
+	</tr>
+	<tr>
+		<td>
+			<img alt="sriram" src="image/sairam.jpg" height="100px" width="100px">
+		</td>
+		<td>
+			   BBSR/MUMBAI<!-- <input type="checkbox" name="bus" value="(FROM) BBSR/(ARRIVE) DELHI"> -->
+		</td>
+		<td>
+		       TUE,WED,THU,FRI
+		
+		</td>
+		
+	</tr>
+	<tr>
+		<td>
+			<img alt="maa tarini" src="image/volvo.jpg" height="100px" width="100px">
+		</td>
+		<td>
+			    BBSR/CHENNAI
+		</td>
+		<td>
+		        MON,WED,FRI,SUN
+		</td>
+		
+	</tr>
+	<tr>
+		<td>
+			<img alt="sai baba" src="image/volvo1.jpg" height="100px" width="100px">
+		</td>
+		<td>
+			    BBSR/BANGLORE
+		</td>
+		
+		<td>
+		        WED,FRI,SUN
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<img alt="chetakbus" src="image/volvo2.jpg" height="100px" width="100px">
+		</td>
+		<td>
+			    BBSR/HYDERABAD
+		</td>
+		<td>
+		        MON,WED,FRI,SUN
+		</td>
+	
+	</tr>
+	<tr>
+		<td>
+		SELECT BUS:<select name="busname">
+			 <option>select</option>
+			  
+			  <option value="DOLPHIN">DOLPHIN</option>
+			   <option value="SRIRAM">SRIRAM</option>
+			    <option value="MAA TARINI">MAA TARINI</option>
+			    <option value="SAI BABA">SAI BABA</option>
+			    <option value="CHETAKBUS">CHETAKBUS</option>
+			 </select>
+		</td>
+		<td>
+			SELECT ROUTE:<select name="busroute">
+			 <option>select</option>
+			  <optgroup label="dolphin/(BBSR/KOLKATA)">
+			  <option value="FROM:BBSR TO:CUTTACK">FROM:BBSR TO:CUTTACK</option>
+			   <option value="FROM:CUTTACK TO:BAUDA">FROM:CUTTACK TO:BAUDA</option>
+			    <option value="FROM:BAUDA TO:SAMBALPUR">FROM:BAUDA TO:SAMBALPUR</option>
+			     <option value="FROM:SAMBALPUR TO:RAURKELA">FROM:SAMBALPUR TO:RAURKELA</option>
+			      <option value="FROM:RAURKELA TO:BALESWAR">FROM:RAURKELA TO:BALESWAR</option>
+			       <option value="FROM:BALESWAR TO:SIMILIPAL">FROM:BALESWAR TO:SIMILIPAL</option>
+			        <option value="FROM:SIMILIPAL TO:KOLKATA">FROM:SIMILIPAL TO:KOLKATA</option>
+			        <option value="FROM:BHUBANESWAR TO:KOLKATA">FROM:BHUBANESWAR TO:KOLKATA</option>
+			         <option value="FROM:CUTTACK TO:SAMBALPUR">FROM:CUTTACK TO:SAMBALPUR</option>
+			         <option value="FROM:BBSR TO:ANGUL">FROM:BBSR TO:ANGUL</option>
+			         
+			         
+			         
+			  </optgroup>
+			   <optgroup label="sriram/(BBSR/MUMBAI)">
+			  <option value="FROM:BBSR TO:CUTTACK">FROM:BBSR TO:CUTTACK</option>
+			   <option value="FROM:CUTTACK TO:PHULBANI">FROM:CUTTACK TO:PHULBANI</option>
+			    <option value="FROM:PHULBANI TO:RAIGARH">FROM:PHULBANI TO:RAIGARH</option>
+			     <option value="FROM:RAIGARH TO:BASTAR">FROM:RAIGARH TO:BASTAR</option>
+			      <option value="FROM:BASTAR TO:JAGDALPUR">FROM:BASTAR TO:JAGDALPUR</option>
+			       <option value="FROM:JAGDALPUR TO:CHANDRAPUR">FROM:JAGDALPUR TO:CHANDRAPUR</option>
+			        <option value="FROM:CHANDRAPUR TO:ADILABAD">FROM:CHANDRAPUR TO:ADILABAD</option>
+			         <option value="FROM:ADILABAD TO:PUNE">FROM:ADILABAD TO:PUNE</option>
+			          <option value="FROM:PUNE TO:MUMBAI">FROM:PUNE TO:MUMBAI</option>
+			           <option value="FROM:PHULBANI TO:PUNE">FROM:PHULBANI TO:PUNE</option>
+			            <option value="FROM:BBSR TO:MUMBAI">FROM:BBSR TO:MUMBAI</option>
+			  </optgroup>
+			   <optgroup label="maa tarini/(BBSR/CHENNAI)">
+			  <option value="FROM:BBSR TO:ANGUL">FROM:BBSR TO:ANGUL</option>
+			   <option value="FROM:ANGUL TO:KONARK">FROM:ANGUL TO:KONARK</option>
+			    <option value="FROM:KONARK TO:PURI">FROM:KONARK TO:PURI</option>
+			     <option value="FROM:BBSR TO:PURI">FROM:BBSR TO:PURI</option>
+			     <option value="FROM:PURI TO:VISAKHAPATNAM">FROM:PURI TO:VISAKHAPATNAM</option>
+			     <option value="FROM:BBSR TO:VISAKHAPATNAM">FROM:BBSR TO:VISAKHAPATNAM</option>
+			     <option value="FROM:VISAKHAPATNAM TO:VIJAYEWADA">FROM:VISAKHAPATNAM TO:VIJAYEWADA</option>
+			     <option value="FROM:VIJAYEWADA TO:TIRUPATI">FROM:VIJAYEWADA TO:TIRUPATI</option>
+			     <option value="FROM:TIRUPATI TO:CHENNAI">FROM:TIRUPATI TO:CHENNAI</option>
+			     <option value="FROM:BBSR TO:CHENNAI">FROM:BBSR TO:CHENNAI</option>
+			     <option value="FROM:VIJAYEWADA TO:CHENNAI">FROM:VIJAYEWADA TO:CHENNAI</option>
+			   
+			  </optgroup>
+			   <optgroup label="sai baba/(BBSR/BANGLORE)">
+			  <option value="FROM:BBSR TO:CUTTACK">FROM:BBSR TO:CUTTACK</option>
+			   <option value="FROM:CUTTACK TO:KORAPUT">FROM:CUTTACK TO:KORAPUT</option>
+			    <option value="FROM:KORAPUT TO:BHADRACHALAM">FROM:KORAPUT TO:BHADRACHALAM</option>
+			    <option value="FROM:BBSR TO:KORAPUT">FROM:BBSR TO:KORAPUT</option>
+			    <option value="FROM:BHADRACHALAM TO:HYDERABAD">FROM:BHADRACHALAM TO:HYDERABAD</option>
+			    <option value="FROM:BBSR TO:HYDERABAD">FROM:BBSR TO:HYDERABAD</option>
+			    <option value="FROM:HYDERABAD TO:LEPAKSHI">FROM:HYDERABAD TO:LEPAKSHI</option>
+			     <option value="FROM:LEPAKSHI TO:BANGLORE">FROM:LEPAKSHI TO:BANGLORE</option>
+			      <option value="FROM:BBSR TO:BANGLORE">FROM:BBSR TO:BANGLORE</option>
+			  </optgroup>
+			  
+			  
+			 </select>
+		</td>
+		<td>
+            
+			 SELECT BUS TIME:<select name="time">
+			 <option>select</option>
+			  <optgroup label="dolphin">
+			  <option value="MON (DEPART)6:05am/(ARRIVE)6:45pm">MON (DEPART)6:05am/(ARRIVE)6:45pm</option>
+			   <option value="TUE (DEPART)9:05am/(ARRIVE)10:5pm">TUE (DEPART)9:05am/(ARRIVE)10:5pm</option>
+			    <option value="THU (DEPART)6:58am/(ARRIVE)6:05pm">THU (DEPART)6:58am/(ARRIVE)6:05pm</option>
+			  </optgroup>
+			   <optgroup label="sriram">
+			  <option value="MON (DEPART)3:05am/(ARRIVE)8:45pm">MON (DEPART)3:05am/(ARRIVE)8:45pm</option>
+			   <option value="TUE (DEPART)9:55pm/(ARRIVE)4:05am">TUE (DEPART)9:55pm/(ARRIVE)4:05am</option>
+			    <option value="THU (DEPART)6:58am/(ARRIVE)6:05pm">THU (DEPART)6:58am/(ARRIVE)6:05pm</option>
+			     <option value="FRI (DEPART)6:58am/(ARRIVE)6:05pm">FRI (DEPART)6:58am/(ARRIVE)6:05pm</option>
+			  </optgroup>
+			   <optgroup label="maa tarini">
+			  <option value="MON (DEPART)7:05am/(ARRIVE)2:45pm">MON (DEPART)7:05am/(ARRIVE)2:45pm</option>
+			   <option value="WED (DEPART)9:05am/(ARRIVE)10:5pm">WED (DEPART)9:05am/(ARRIVE)10:5pm</option>
+			    <option value="FRI (DEPART)1:58pm/(ARRIVE)6:00am">FRI (DEPART)1:58pm/(ARRIVE)6:00am</option>
+			     <option value="SUN (DEPART)12:00pm/(ARRIVE)6:08am">SUN (DEPART)12:00pm/(ARRIVE)6:08am</option>
+			  </optgroup>
+			   <optgroup label="sai baba">
+			  <option value="WED (DEPART)8:15am/(ARRIVE)3:45pm">WED (DEPART)8:15am/(ARRIVE)3:45pm</option>
+			   <option value="FRI (DEPART)9:05am/(ARRIVE)6:05pm">FRI (DEPART)9:05am/(ARRIVE)6:05pm</option>
+			    <option value="SUN (DEPART)11:18am/(ARRIVE)2:05pm">SUN (DEPART)11:18am/(ARRIVE)2:05pm</option>
+			  </optgroup>
+			  
+			  
+			 </select>
+		</td>
+		<td>
+		  SELECT JOURNEY DAY:<select name="journey">
+			 <option>select</option>
+			  <optgroup label="dolphin">
+			  <option value="MON">MONDAY</option>
+			   <option value="TUE">TUESDAY</option>
+			    <option value="THU">THURSDAY</option>
+			  </optgroup>
+			  <optgroup label="sriram">
+			  <option value="TUESDAY">TUESDAY</option>
+			   <option value="WEDNESDAY">WEDNESDAY</option>
+			    <option value="THURSDAY">THURSDAY</option>
+			    <option value="FRIDAY">FRIDAY</option>
+			  </optgroup>
+			  <optgroup label="maa tarini">
+			  <option value="MONDAY">MONDAY</option>
+			   <option value="WEDNESDAY">WEDNESDAY</option>
+			    <option value="FRIDAY">FRIDAY</option>
+			    <option value="SUNDAY">SUNDAY</option>
+			  </optgroup>
+			  <optgroup label="sai baba">
+			  <option value="WEDNESDAY">WEDNESDAY</option>
+			   <option value="FRIDAY">FRIDAY</option>
+			    <option value="SUNDAY">SUNDAY</option>
+			  </optgroup>
+			  </select>
+		</td>
+		<td>
+		
+		
+	    TOTAL BUS FARE:<select name="price">
+			 <option>select travel price</option>
+			  <optgroup label="dolphin/(BBSR/KOLKATA)">
+			  <option value="FROM:BBSR TO:CUTTACK     RS 100/- ">FROM:BBSR TO:CUTTACK    RS 100/-</option>
+			   <option value="FROM:CUTTACK TO:BAUDA     RS 184/-">FROM:CUTTACK TO:BAUDA   RS 184/-</option>
+			    <option value="FROM:BAUDA TO:SAMBALPUR    RS 80/-">FROM:BAUDA TO:SAMBALPUR   RS 80/-</option>
+			     <option value="FROM:SAMBALPUR TO:RAURKELA    RS 90/-">FROM:SAMBALPUR TO:RAURKELA   RS 90/-</option>
+			      <option value="FROM:RAURKELA TO:BALESWAR    RS 110/-">FROM:RAURKELA TO:BALESWAR   RS 110/-</option>
+			       <option value="FROM:BALESWAR TO:SIMILIPAL    RS 120/-">FROM:BALESWAR TO:SIMILIPAL  RS 120/-</option>
+			        <option value="FROM:SIMILIPAL TO:KOLKATA    RS 200/-">FROM:SIMILIPAL TO:KOLKATA   RS 200/- </option>
+			        <option value="FROM:BHUBANESWAR TO:KOLKATA   RS 370/-">FROM:BHUBANESWAR TO:KOLKATA  RS 370/-</option>
+			         <option value="FROM:CUTTACK TO:SAMBALPUR   RS 195/-">FROM:CUTTACK TO:SAMBALPUR  RS 195/-</option>
+			         <option value="FROM:BBSR TO:ANGUL     RS 140/-">FROM:BBSR TO:ANGUL  RS 140/-</option>
+			         
+			         
+			         
+			  </optgroup>
+			   <optgroup label="sriram/(BBSR/MUMBAI)">
+			  <option value="FROM:BBSR TO:CUTTACK    RS 100/-">FROM:BBSR TO:CUTTACK RS 100/-</option>
+			   <option value="FROM:CUTTACK TO:PHULBANI    RS 110/-">FROM:CUTTACK TO:PHULBANI RS 160/-</option>
+			    <option value="FROM:PHULBANI TO:RAIGARH   RS 130/-">FROM:PHULBANI TO:RAIGARH RS 130/-</option>
+			     <option value="FROM:RAIGARH TO:BASTAR    RS 30/-">FROM:RAIGARH TO:BASTAR  RS 40/-</option>
+			      <option value="FROM:BASTAR TO:JAGDALPUR    RS 10/-">FROM:BASTAR TO:JAGDALPUR  RS 15/-</option>
+			       <option value="FROM:JAGDALPUR TO:CHANDRAPUR    RS 185/-">FROM:JAGDALPUR TO:CHANDRAPUR  RS 185/-</option>
+			        <option value="FROM:CHANDRAPUR TO:ADILABAD    RS 45/-">FROM:CHANDRAPUR TO:ADILABAD  RS 45/-</option>
+			         <option value="FROM:ADILABAD TO:PUNE      RS 200/-">FROM:ADILABAD TO:PUNE RS 200/-</option>
+			          <option value="FROM:PUNE TO:MUMBAI       RS 90/-">FROM:PUNE TO:MUMBAI  RS 90/-</option>
+			           <option value="FROM:PHULBANI TO:PUNE    RS 370/-">FROM:PHULBANI TO:PUNE  RS 370/-</option>
+			            <option value="FROM:BBSR TO:MUMBAI    RS 965/-">FROM:BBSR TO:MUMBAI  RS 965/-</option>
+			  </optgroup>
+			   <optgroup label="maa tarini/(BBSR/CHENNAI)">
+			  <option value="FROM:BBSR TO:ANGUL     RS 140/-">FROM:BBSR TO:ANGUL  RS 140/-</option>
+			   <option value="FROM:ANGUL TO:KONARK    RS 165/-">FROM:ANGUL TO:KONARK  RS 165/-</option>
+			    <option value="FROM:KONARK TO:PURI    RS 70/-">FROM:KONARK TO:PURI  RS 90/-</option>
+			     <option value="FROM:BBSR TO:PURI   RS 180/-">FROM:BBSR TO:PURI  RS 180/-</option>
+			     <option value="FROM:PURI TO:VISAKHAPATNAM    RS 280/-">FROM:PURI TO:VISAKHAPATNAM  RS 280/-</option>
+			     <option value="FROM:BBSR TO:VISAKHAPATNAM    RS 300/-">FROM:BBSR TO:VISAKHAPATNAM  RS 300/-</option>
+			     <option value="FROM:VISAKHAPATNAM TO:VIJAYEWADA   RS 100/-">FROM:VISAKHAPATNAM TO:VIJAYEWADA  RS 100/-</option>
+			     <option value="FROM:VIJAYEWADA TO:TIRUPATI   RS 395/-">FROM:VIJAYEWADA TO:TIRUPATI  RS 395/-</option>
+			     <option value="FROM:TIRUPATI TO:CHENNAI   RS 95/-">FROM:TIRUPATI TO:CHENNAI  RS 95/-</option>
+			     <option value="FROM:BBSR TO:CHENNAI   RS 600/-">FROM:BBSR TO:CHENNAI</option>
+			     <option value="FROM:VIJAYEWADA TO:CHENNAI  RS 296/-">FROM:VIJAYEWADA TO:CHENNAI  RS 296/-</option>
+			   
+			  </optgroup>
+			   <optgroup label="sai baba/(BBSR/BANGLORE)">
+			  <option value="FROM:BBSR TO:CUTTACK    RS 100/-">FROM:BBSR TO:CUTTACK  RS 100/-</option>
+			   <option value="FROM:CUTTACK TO:KORAPUT    RS 175/-">FROM:CUTTACK TO:KORAPUT  RS 175/-</option>
+			    <option value="FROM:KORAPUT TO:BHADRACHALAM  RS 95/-">FROM:KORAPUT TO:BHADRACHALAM  RS 95/-</option>
+			    <option value="FROM:BBSR TO:KORAPUT    RS 200/-">FROM:BBSR TO:KORAPUT  RS 200/-</option>
+			    <option value="FROM:BHADRACHALAM TO:HYDERABAD    RS 290/-">FROM:BHADRACHALAM TO:HYDERABAD  RS 290/-</option>
+			    <option value="FROM:BBSR TO:HYDERABAD    RS 360/-">FROM:BBSR TO:HYDERABAD  RS 360/-</option>
+			    <option value="FROM:HYDERABAD TO:LEPAKSHI    RS 398/-">FROM:HYDERABAD TO:LEPAKSHI  RS 398/-</option>
+			     <option value="FROM:LEPAKSHI TO:BANGLORE    RS 55/-">FROM:LEPAKSHI TO:BANGLORE  RS 55/-</option>
+			      <option value="FROM:BBSR TO:BANGLORE      RS 989/-">FROM:BBSR TO:BANGLORE  RS 989/-</option>
+			  </optgroup>
+			  
+			  
+			 </select>
+	    
+	    
+	    
+	    
+	    
+		</td>
+	</tr>
+</table><br><br>
+
+<button id="button"  onclick="Savedata1.java"><img alt="" src='image/booknow.png' height='45px' width='80px'></button><font color="orange">....</font><button type="reset" value="clear"><img alt="" src='image/reset.jpg' height='45px' width='80px'></button><font color="orange">......</font><a href="index1.html"><font color="green"><b><img alt="" src='image/cancel.jpg' height='45px' width='80px'></b></font></a>
+</div>
+
+<div id="content1"></div>
+<div id="content2">
+
+
+</div>
+ <div id="fmenu">
+<marquee><i>* the bus travelling agency in bhubaneswar is firstly startup and only few bus are available only.  * this is our bhubaneswar bus travelling agency. * our address for contact mobile no:8337970729 or can visit facebook.com on homejeet behera.</i></marquee>
+
+</div> 
+<div id="fooder">
+</div>
+</div>
+</form>
+
+
+
+</body>
+
+</html>

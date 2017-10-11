@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BHUBANESWAR BUS TRAVELLING SERVICE (ODISHA)</title>
+</head>
+<style type="text/css">
+#a{
+   height:100%;
+   width:100%;
+   background-color: yellow;
+}
+ #b{
+  height:110%;
+  width:100%;
+  background-color: orange;
+}
+#c{
+  height:200%;
+  width:100%;
+  background-color: blue;
+}
+#c1{
+height:100px;
+width:100%;
+float:left:
+background-color: pink;
+}
+#upper{
+  height:360%;
+  width:100%;
+ /* background-image: url("image/search2.jpg");  */
+background-color: violet;
+}
+/*#lower{
+height:50%;
+width:40px;
+background-color: red;
+}*/
+#c2{
+  height:100%;
+width:40px;
+background-color: red;
+}
+.inp{
+border-style:inset;
+border-width:thick;
+
+}
+.btn{
+margin: auto;
+border-style: inset; 
+
+}
+.search{
+background-color:lime;
+font-family:monospace;
+
+
+}
+.field{
+background-color: infotext;
+font-style: italic;
+
+}
+a:link a:visited{
+}
+
+a:hover a:active{
+
+
+}
+
+.mainheader nav{
+/* background-color: #666; */
+height: 60px;
+/* border-radius:5px; */
+}
+.mainheader nav ul{
+list-style: none;
+margin: 0 auto;
+}
+.mainheader nav ul li{
+float:center;
+display: inline;
+}
+.mainheader nav a:link .mainheader nav a:visited {
+	color: #fff;
+	display: inline-block;
+	padding: 20px 25px;
+}
+.mainheader nav a:hover  .mainheader nav a:active 
+, .mainheader nav .active a:link , .mainheader nav .active a:visited {
+background-color: #CFSC3F;
+}
+
+</style>
+
+<body>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function)()
+{
+$("div").click(function(){
+	$("div").animate({left:'800px'});
+	
+});
+		
+});	
+</script>	
+
+
+
+<form action="fetch1" method="post">
+<div id=a>
+<div id=b>
+<h1 align="center"> <font color="red">WELCOME TO BHUBANESWAR BUS TRAVELLING SERVICE (ODISHA)</font></h1><br><br>
+<header class="mainheader">
+<nav>
+ <ul class="nav nav-pills">
+    <li><a href="index1.jsp"><img alt="" src='image/home.jpg' height='45px' width='50px'></a></li>
+     <li><a href="route.jsp"><img alt="" src='image/book.jpg' height='45px' width='80px'></a></li>
+      <li><a href="admin.html"><img alt="" src='image/admin.jpg' height='45px' width='80px'></a></li>
+       <li><a href="fetch.html"><img alt="" src='image/search.jpg' height='45px' width='50px'></a></li>
+        <li><a href="Login.html"><img alt="" src='image/logout.jpg' height='45px' width='80px'></a></li>
+
+ </ul>
+ </nav>
+ </header>
+ 
+
+
+
+ <img alt="SEARCH CUSTOMER" src='image/search.jpg' height='200px' width='200px'>
+</div>
+<div id=c>
+<div id=c1>
+<div id=upper>
+<fieldset class="field">
+<legend class="search">Get Your Ticket :</legend>
+<label><font color="green">ENTER TICKET  ID:</font></label>
+ <input type="text" class="inp" name="ticketid" placeholder="Type ticket id…" required>
+          <button type="submit" class="btn"><img alt="SEARCH CUSTOMER" src='image/search1.jpg' height='90px' width='90px'></button>
+</fieldset>
+</div>
+<div id="lower">
+</div>
+</div>
+<div id=c2>
+</div>
+
+</div>
+</div>
+</form>
+
+</body>
+</html>
